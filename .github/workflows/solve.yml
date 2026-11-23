@@ -5,6 +5,7 @@ on:
       game: {description: "file in games/ (no .json)", default: cash6_probe}
       iters: {description: "max iterations", default: "300"}
       max_nodes: {description: "nodes to dump", default: "4000"}
+      kind: {description: "pre (games/) or post (spots/)", default: pre}
 jobs:
   solve:
     runs-on: ubuntu-latest
@@ -29,7 +30,9 @@ jobs:
         run: |
           cd gto && (./target/release/gto-server > ../server.log 2>&1 &) 
           for i in $(seq 60); do curl -sf http://127.0.0.1:3737/api/version && break; sleep 2; done; echo
-          python3 -u ../probe.py ../games/${{ inputs.game }}.json ../out ${{ inputs.iters }} ${{ inputs.max_nodes }}
+          if [ "${{ inputs.kind }}" = post ]; then python3 -u ../probe_post.py ../spots/${{ inputs.game }}.json ../out ${{ inputs.iters }} ${{ inputs.max_nodes }}
+          else python3 -u ../probe.py ../games/${{ inputs.game }}.json ../out ${{ inputs.iters }} ${{ inputs.max_nodes }}; fi
+          grep -E "VmHWM|VmRSS" /proc/$(pgrep gto-server)/status || true
       - name: server log
         if: always()
         run: tail -150 server.log; ls -la out gto/saves 2>/dev/null | head -40
