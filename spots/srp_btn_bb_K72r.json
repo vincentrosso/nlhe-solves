@@ -1,15 +1,46 @@
 {
-  "board": "Ks7h2d",
-  "range_oop": "55-22,A8s-A2s,K9s-K6s,Q9s-Q6s,J9s-J7s,T8s-T7s,97s,98s,86s,87s,75s,76s,64s,65s,53s,54s,43s,AJo-A8o,KTo-K9o,QTo,QJo,JTo,T9o,98o",
-  "range_ip": "22+,A2s+,K6s+,Q8s+,J8s+,T8s+,97s+,87s,76s,65s,A8o+,KTo+,QTo+,JTo",
-  "tree": {
-    "starting_pot": 55, "effective_stack": 975, "rake_pct": 5, "rake_cap": 30,
-    "oop": [{"bet": [{"PotPct": 50}], "raise": [{"PotPct": 75}], "donk": []},
-            {"bet": [{"PotPct": 50}], "raise": [{"PotPct": 75}], "donk": []},
-            {"bet": [{"PotPct": 50}], "raise": [{"PotPct": 75}], "donk": []}],
-    "ip":  [{"bet": [{"PotPct": 50}], "raise": [{"PotPct": 75}], "donk": []},
-            {"bet": [{"PotPct": 50}], "raise": [{"PotPct": 75}], "donk": []},
-            {"bet": [{"PotPct": 50}], "raise": [{"PotPct": 75}], "donk": []}],
-    "allin_threshold": 0.85, "add_allin": false, "max_raises": 10
+ "board": "Ks7h2d",
+ "range_oop": "55-22,A8s-A2s,K9s-K6s,Q9s-Q6s,J9s-J7s,T8s-T7s,97s,98s,86s,87s,75s,76s,64s,65s,53s,54s,43s,AJo-A8o,KTo-K9o,QTo,QJo,JTo,T9o,98o",
+ "range_ip": "22+,A2s+,K6s+,Q8s+,J8s+,T8s+,97s+,87s,76s,65s,A8o+,KTo+,QTo+,JTo",
+ "starting_pot": 55,
+ "effective_stack": 975,
+ "rake_pct": 5,
+ "rake_cap": 30,
+ "allin_threshold": 85,
+ "add_allin": false,
+ "max_raises": 10,
+ "oop": [
+  {
+   "bet": "50",
+   "raise": "75",
+   "donk": ""
+  },
+  {
+   "bet": "50",
+   "raise": "75",
+   "donk": ""
+  },
+  {
+   "bet": "50",
+   "raise": "75",
+   "donk": ""
   }
+ ],
+ "ip": [
+  {
+   "bet": "50",
+   "raise": "75",
+   "donk": ""
+  },
+  {
+   "bet": "50",
+   "raise": "75",
+   "donk": ""
+  },
+  {
+   "bet": "50",
+   "raise": "75",
+   "donk": ""
+  }
+ ]
 }
