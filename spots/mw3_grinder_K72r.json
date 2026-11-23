@@ -1,0 +1,32 @@
+{
+ "board": "Ks7h2d",
+ "ranges": [
+  "TT-22,AJs-A6s,KQs-KTs,K8s-K5s,Q8s+,J8s+,T7s+,96s+,86s+,75s+,64s+,54s,AQo-ATo,KQo-KJo,QJo,JTo",
+  "33+,A2s+,K9s+,Q9s+,J9s+,T8s+,98s,87s,76s,ATo+,KJo+,QJo",
+  "99-22,AJs-A6s,KTs-K9s,QJs-Q9s,JTs-J9s,T9s-T8s,98s,87s,65s,AQo,KQo"
+ ],
+ "starting_pot": 95,
+ "stacks": [
+  970,
+  970,
+  970
+ ],
+ "sizes": [
+  {
+   "bet": "50",
+   "raise": "100"
+  },
+  {
+   "bet": "50",
+   "raise": "100"
+  },
+  {
+   "bet": "50",
+   "raise": "100"
+  }
+ ],
+ "rake_pct": 5,
+ "rake_cap": 30,
+ "max_raises": 1,
+ "add_allin": false
+}
